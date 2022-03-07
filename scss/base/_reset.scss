@@ -1,0 +1,51 @@
+@use '../base/root' as *;
+
+/* autoprefixer grid: autoplace */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+	font-family: var(--ff);
+	font-size: 62.5%;
+	/* 1rem = 16px */
+	/* 1rem * 62.5% = 10px */
+	/* If all font sizes = 62.5% than rem * 0.625 */
+	/* 1rem = 10px. 0.1rem = 1px. 2.4rem = 24px... */
+	color: var(--very-dark-grayish-blue);
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	width: 100%;
+	min-height: 100vh;
+	line-height: 1.6;
+	font-size: 1.2rem;
+	text-rendering: optimizeSpeed;
+}
+
+/* Remove default margins and paddings */
+body,
+h1,
+h2,
+p,
+dl,
+dt,
+dd,
+button {
+	margin: 0;
+	padding: 0;
+}
+
+/* Make images easier to work with */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}

@@ -1,0 +1,19 @@
+@use '../helpers/functions';
+
+// Font-face regular
+@font-face {
+	font-family: 'Kumbh Sans';
+	font-display: swap;
+	src: url('../fonts/KumbhSans-Regular.woff2') format('woff2'), url('../fonts/KumbhSans-Regular.woff') format('woff');
+	font-weight: functions.weight(regular);
+	font-style: normal;
+}
+
+// Font-face bold
+@font-face {
+	font-family: 'Kumbh Sans';
+	font-display: swap;
+	src: url('../fonts/KumbhSans-Bold.woff2') format('woff2'), url('../fonts/KumbhSans-Bold.woff') format('woff2');
+	font-weight: functions.weight(bold);
+	font-style: normal;
+}

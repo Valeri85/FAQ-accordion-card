@@ -1,0 +1,30 @@
+{
+	"name": "faq-accordion-card-main",
+	"version": "1.0.0",
+	"description": "accordion card challenge on Frontend Mentor",
+	"main": "index.js",
+	"scripts": {
+		"sync": "npx browser-sync start --server --files 'index.html' --watch --no-notify",
+		"sass:watch": "npx sass -w scss/style.scss:css/style.css",
+		"groupMedia": "npx group-css-media-queries css/style.css css/style.css",
+		"postcss:autoprefixer": "npx postcss css/style.css -u autoprefixer -r",
+		"sass:compressed": "npx sass css/style.css:css/style.min.css --style compressed",
+		"ttf2woff": "npx ttf2woff fonts/KumbhSans-Regular.ttf fonts/KumbhSans-Regular.woff && npx ttf2woff fonts/KumbhSans-Bold.ttf fonts/KumbhSans-Bold.woff",
+		"build": "npm run groupMedia && npm run postcss:autoprefixer && npm run sass:compressed"
+	},
+	"keywords": [],
+	"author": "Valeri Makaridze",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^10.4.2",
+		"browser-sync": "^2.27.7",
+		"group-css-media-queries": "^1.4.1",
+		"postcss": "^8.4.6",
+		"postcss-cli": "^9.1.0",
+		"sass": "^1.49.8",
+		"ttf2woff": "^3.0.0"
+	},
+	"browserslist": [
+		"> 0.01%"
+	]
+}

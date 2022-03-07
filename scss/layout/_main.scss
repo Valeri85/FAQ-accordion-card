@@ -1,0 +1,141 @@
+@use '../base/root' as *;
+@use '../helpers/functions' as *;
+@use '../helpers/mixins';
+
+.main {
+	--dark-grayish-blue: hsl(240, 6%, 100%);
+	--shadow: rgba(0, 0, 0, 0.25);
+	display: grid;
+	grid: 9em max-content / em(440);
+	gap: 2em;
+	margin-top: em(150);
+	padding-bottom: 4em;
+	background-color: var(--dark-grayish-blue);
+	border-radius: em(35);
+	box-shadow: 0 40px 70px 0px var(--shadow);
+	@include mixins.desktop {
+		grid: 1fr / 50% calc(50% - 1em);
+		position: relative;
+		gap: 1em;
+		padding: 0;
+		max-width: em(1200);
+		min-height: em(665);
+	}
+	&__section-img {
+		display: grid;
+		grid: 'pictures-wrapper' 1fr / 1fr;
+		place-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	&__pictures-wrapper {
+		display: grid;
+		grid: 'pictures' 1fr / 1fr;
+		place-items: center;
+		grid-area: pictures-wrapper;
+		width: 100%;
+		height: 100%;
+		@include mixins.desktop {
+			position: relative;
+			overflow: hidden;
+		}
+	}
+	&__pictures-wrapper > picture {
+		grid-area: pictures;
+	}
+	&__img-woman {
+		width: em(315);
+		transform: translate(0, em(-143.5));
+		position: relative;
+		z-index: var(--z-index-2);
+		@include mixins.desktop {
+			width: 100%;
+			transform: translate(em(-100), em(-2.5));
+		}
+	}
+	&__img-shadow {
+		transform: translateY(em(-47.5));
+		width: em(320);
+		z-index: var(--z-index-1);
+		@include mixins.desktop {
+			position: absolute;
+			width: em(1250);
+			max-width: none;
+			transform: translate(em(-1055), em(-710));
+		}
+	}
+	&__box-img {
+		display: none;
+		@include mixins.desktop {
+			display: block;
+			position: absolute;
+			width: em(255);
+			transform: translate(em(-295), em(61));
+			z-index: var(--z-index-3);
+		}
+	}
+	&__title {
+		font-size: 3rem;
+		color: var(--very-dark-desaturated-blue);
+		text-align: center;
+		@include mixins.desktop {
+			margin-bottom: 0.5em;
+			text-align: left;
+		}
+	}
+	&__section-faq {
+		@include mixins.desktop {
+			padding: 5em 7em 7em 0;
+		}
+	}
+	&__faq {
+		padding-inline: 2em;
+		@include mixins.desktop {
+			padding: 0;
+		}
+		&-item {
+			border-bottom: 1px solid var(--light-grayish-blue);
+		}
+		&-button {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			min-width: 100%;
+			padding-top: 1.25em;
+			background-color: transparent;
+			border: 0;
+			font-family: inherit;
+			text-align: inherit;
+			color: inherit;
+			transition: color var(--animation-time) ease, font-weight var(--animation-time) ease;
+			cursor: pointer;
+			@include mixins.desktop {
+				font-size: 1.4rem;
+			}
+			&:hover {
+				font-weight: weight(bold);
+				color: var(--soft-red);
+			}
+			&:is(.active) .main__faq-icon {
+				transform: rotate(180deg);
+			}
+		}
+		&-icon {
+			transition: transform var(--animation-time) ease;
+			@include mixins.desktop {
+				margin-right: 1.5em;
+			}
+		}
+		&-answer {
+			padding: 1em 2em 0 0;
+			max-height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: opacity var(--animation-time) ease, max-height var(--animation-time) ease,
+				padding var(--animation-time) ease;
+			@include mixins.desktop {
+				padding: 1.25em 2em 0 0;
+			}
+		}
+	}
+}

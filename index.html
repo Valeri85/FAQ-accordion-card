@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- 1) Characters and symbols -->
+		<meta charset="UTF-8" />
+		<!-- 2) Displays site properly based on user's device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- 3) Preload fonts -->
+		<link rel="preload" href="./fonts/KumbhSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="./fonts/KumbhSans-Regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="./fonts/KumbhSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="./fonts/KumbhSans-Bold.woff" as="font" type="font/woff" crossorigin />
+		<!-- 4) Preload css -->
+		<link rel="preload" href="./css/style.min.css" as="style" />
+		<!-- 5) Title -->
+		<title>Frontend Mentor | FAQ Accordion Card</title>
+		<!-- 6) Favicon -->
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<!-- 7) Author -->
+		<meta name="author" content="Valeri Makaridze" />
+		<!-- 8) Description -->
+		<meta name="description" content="FAQ Accordion Card challenge on Frontend Mentor" />
+		<!-- 9) Keywords -->
+		<meta name="keywords" content="front-end mentor, Valeri Makaridze, FAQ Accordion Card, challenge" />
+		<!-- 10) Theme color -->
+		<meta name="theme-color" content="#6565e7" />
+		<!-- 11) Facebook open graph -->
+		<meta property="og:title" content="FAQ Accordion Card" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="FAQ Accordion Card challenge on Frontend Mentor" />
+		<!-- <meta
+			property="og:image"
+			content="https://profile-card-component-front-end-mentor.netlify.app/screenshot.png"
+		/> -->
+		<meta property="og:image:alt" content="FAQ Accordion Card" />
+		<!-- <meta property="og:url" content="https://profile-card-component-front-end-mentor.netlify.app/" /> -->
+		<!-- 12) Twitter card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="FAQ Accordion Card" />
+		<meta name="twitter:description" content="FAQ Accordion Card challenge on Frontend Mentor" />
+		<meta name="twitter:site" content="@Valeri79125128" />
+		<!-- <meta
+			name="twitter:image"
+			content="https://profile-card-component-front-end-mentor.netlify.app/screenshot.png"
+		/> -->
+		<meta property="twitter:image:alt" content="FAQ Accordion Card" />
+		<meta name="twitter:creator" content="@Valeri79125128" />
+		<!-- 13) Css -->
+		<link rel="stylesheet" href="./css/style.min.css" />
+		<!-- 14) Javascript -->
+		<script src="./js/script.js" defer></script>
+	</head>
+
+	<!-- Body -->
+	<body>
+		<main class="main">
+			<!-- Images section -->
+			<section class="main__section-img">
+				<!-- Pictures container -->
+				<div class="main__pictures-wrapper">
+					<!-- Picture woman -->
+					<picture class="main__picture-woman">
+						<source
+							media="(min-width: 1440px)"
+							srcset="./images/illustration-woman-online-desktop.svg"
+						/>
+						<source srcset="./images/illustration-woman-online-mobile.svg" />
+						<img
+							class="main__img-woman"
+							width="240"
+							height="182"
+							src="./images/illustration-woman-online-mobile.svg"
+							alt="Woman standing in front of the monitor"
+						/>
+					</picture>
+					<!-- Picture shadow -->
+					<picture class="main__picture-shadow">
+						<source media="(min-width: 1440px)" srcset="./images/bg-pattern-desktop.svg" />
+						<source srcset="./images/bg-pattern-mobile.svg" />
+						<img
+							class="main__img-shadow"
+							src="./images/bg-pattern-mobile.svg"
+							width="240"
+							height="104"
+							alt="Shadow of the picture"
+						/>
+					</picture>
+				</div>
+
+				<!-- Box image -->
+				<img
+					class="main__box-img"
+					src="./images/illustration-box-desktop.svg"
+					width="191"
+					height="184"
+					alt="Mail box"
+				/>
+			</section>
+
+			<!-- Accordion section -->
+			<section class="main__section-faq">
+				<!-- Title -->
+				<h1 class="main__title">FAQ</h1>
+
+				<!-- Accordion start -->
+				<dl class="main__faq">
+					<!-- Accordion item -->
+					<div class="main__faq-item">
+						<!-- Question -->
+						<dt class="main__faq-question">
+							<h2>
+								<button
+									class="main__faq-button"
+									type="button"
+									aria-controls="answer-1"
+									aria-expanded="false"
+								>
+									How many team members can I invite?
+									<!-- Icon -->
+									<img
+										class="main__faq-icon"
+										src="./images/icon-arrow-down.svg"
+										width="10"
+										height="7"
+										alt=""
+										aria-hidden="true"
+									/>
+								</button>
+							</h2>
+						</dt>
+
+						<!-- Answer -->
+						<dd class="main__faq-answer" id="answer-1" aria-hidden="true">
+							You can invite up to 2 additional users on the Free plan. There is no limit on
+							team members for the Premium plan.
+						</dd>
+					</div>
+
+					<!-- Accordion item -->
+					<div class="main__faq-item">
+						<!-- Question -->
+						<dt class="main__faq-question">
+							<button
+								class="main__faq-button active"
+								type="button"
+								aria-controls="answer-2"
+								aria-expanded="false"
+							>
+								What is the maximum file upload size?
+
+								<!-- Icon -->
+								<img
+									class="main__faq-icon"
+									src="./images/icon-arrow-down.svg"
+									width="10"
+									height="7"
+									alt=""
+									aria-hidden="true"
+								/>
+							</button>
+						</dt>
+
+						<!-- Answer -->
+						<dd class="main__faq-answer show" id="answer-2" aria-hidden="true">
+							No more than 2GB. All files in your account must fit your allotted storage space.
+						</dd>
+					</div>
+
+					<!-- Accordion item -->
+					<div class="main__faq-item">
+						<!-- Question -->
+						<dt class="main__faq-question">
+							<h2>
+								<button
+									class="main__faq-button"
+									type="button"
+									aria-controls="answer-3"
+									aria-expanded="false"
+								>
+									How do I reset my password?
+									<!-- Icon -->
+									<img
+										class="main__faq-icon"
+										src="./images/icon-arrow-down.svg"
+										width="10"
+										height="7"
+										alt=""
+										aria-hidden="true"
+									/>
+								</button>
+							</h2>
+						</dt>
+
+						<!-- Answer -->
+						<dd class="main__faq-answer" id="answer-3" aria-hidden="true">
+							Click “Forgot password” from the login page or “Change password” from your profile
+							page. A reset link will be emailed to you.
+						</dd>
+					</div>
+
+					<!-- Accordion item -->
+					<div class="main__faq-item">
+						<!-- Question -->
+						<dt class="main__faq-question">
+							<h2>
+								<button
+									class="main__faq-button"
+									type="button"
+									aria-controls="answer-4"
+									aria-expanded="false"
+								>
+									Can I cancel my subscription?
+									<!-- Icon -->
+									<img
+										class="main__faq-icon"
+										src="./images/icon-arrow-down.svg"
+										width="10"
+										height="7"
+										alt=""
+										aria-hidden="true"
+									/>
+								</button>
+							</h2>
+						</dt>
+
+						<!-- Answer -->
+						<dd class="main__faq-answer" id="answer-4" aria-hidden="true">
+							Yes! Send us a message and we’ll process your request no questions asked.
+						</dd>
+					</div>
+
+					<!-- Accordion item -->
+					<div class="main__faq-item">
+						<!-- Question -->
+						<dt class="main__faq-question">
+							<h2>
+								<button
+									class="main__faq-button"
+									type="button"
+									aria-controls="answer-5"
+									aria-expanded="false"
+								>
+									Do you provide additional support?
+									<!-- Icon -->
+									<img
+										class="main__faq-icon"
+										src="./images/icon-arrow-down.svg"
+										width="10"
+										height="7"
+										alt=""
+										aria-hidden="true"
+									/>
+								</button>
+							</h2>
+						</dt>
+
+						<!-- Answer -->
+						<dd class="main__faq-answer" id="answer-5" aria-hidden="true">
+							Chat and email support is available 24/7. Phone lines are open during normal
+							business hours.
+						</dd>
+					</div>
+				</dl>
+				<!-- Accordion end -->
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<p class="footer__text">
+				Challenge by
+				<a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>.
+			</p>
+			<p class="footer__text">
+				Coded by
+				<a class="footer__link" href="https://www.frontendmentor.io/profile/Valeri85" target="_blank"
+					>Valeri</a
+				>.
+			</p>
+		</footer>
+	</body>
+</html>

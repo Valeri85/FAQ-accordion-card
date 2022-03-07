@@ -1,0 +1,5 @@
+@use 'functions';
+
+// Breakpoints
+$mobile: functions.em(375);
+$desktop: functions.em(1440);

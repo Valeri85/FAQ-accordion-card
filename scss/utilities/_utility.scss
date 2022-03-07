@@ -1,0 +1,15 @@
+@use '../base/root' as *;
+@use '../helpers/functions';
+
+.active {
+	color: var(--very-dark-desaturated-blue);
+	font-weight: functions.weight(bold);
+}
+
+.show {
+	max-height: functions.em(180);
+	padding-bottom: 1.5em;
+	opacity: 1;
+	transition: opacity var(--animation-time) ease var(--animation-delay-time),
+		max-height var(--animation-time) ease, padding var(--animation-time) ease;
+}
