@@ -133,9 +133,6 @@
 			overflow: hidden;
 			transition: opacity var(--animation-time) ease, max-height var(--animation-time) ease,
 				padding var(--animation-time) ease;
-			@include mixins.desktop {
-				padding: 1.25em 2em 0 0;
-			}
 		}
 	}
 }
