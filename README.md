@@ -50,7 +50,7 @@ Users should be able to:
 -   [group-css-media-queries](https://www.npmjs.com/package/group-css-media-queries) CSS postprocessing: group media queries.
 -   [ttf2woff](https://www.npmjs.com/package/ttf2woff) - npm package helped me convert fonts from ttf format to woff.
 
-### Articles:
+### Articles
 
 -   [Semantic Markup](https://www.sarasoueidan.com/blog/accordion-markup/) - Great article about semantic accordion markup.
 -   [a11y accordion](https://davatron5000.github.io/a11y-nutrition-cards/components/accordion) - Keyboard expectations (a11y).
